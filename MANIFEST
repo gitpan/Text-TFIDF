@@ -1,0 +1,9 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Text-TFIDF.t
+t/perlfreebsd.txt
+t/perllinux.txt
+lib/Text/TFIDF.pm
+META.yml                                 Module meta-data (added by MakeMaker)
