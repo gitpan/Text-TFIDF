@@ -3,9 +3,10 @@ package Text::TFIDF;
 use 5.012003;
 use strict;
 use warnings;
+use Carp;
 
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 sub new {
@@ -27,6 +28,16 @@ sub TFIDF {
 	my $self = shift;
 	my $file = shift;
 	my $word = shift;
+
+	if (!defined $file) { 
+		carp("You must give a filename for the TFIDF measure.\n");
+		return undef;
+	}
+
+	if (!defined $word) {
+		carp("You must give a word for the TFIDF measure.\n");
+		return undef;
+	}
 
 	return undef if (!defined $self->{file}->{$file});
 	return $self->TF($file,$word)*$self->IDF($word);

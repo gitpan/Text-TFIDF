@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Text-TFIDF
-version:            0.01
+version:            0.02
 abstract:           Perl extension for computing the TF-IDF measure
 author:
     - Leigh Metcalf <leigh@fprime.net>

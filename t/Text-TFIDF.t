@@ -8,7 +8,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 9;
+use Test::More tests => 11;
 BEGIN { use_ok('Text::TFIDF') };
 
 #########################
@@ -26,3 +26,5 @@ my $ob = new Text::TFIDF(file=>["./t/perlfreebsd.txt","./t/perllinux.txt"]);
 ok(defined $ob && $ob->isa('Text::TFIDF'));
 ok($obj->TFIDF("./t/perllinux.txt","perl"));
 ok($obj->TFIDF("./t/perlfreebsd.txt","perl"));
+ok(!defined $obj->TFIDF());
+ok(!defined $obj->TFIDF("./t/perlfreebsd.txt"));
